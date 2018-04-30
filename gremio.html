@@ -1,93 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <meta charset="UTF-8">
-    <title>Portal Estudantil</title>
-</head>
-<style>
-    .topbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #5576aa;
-        font-family: 'Roboto', sans-serif;
-    }
-    .tbo {
-        float: left;
-    }
-    .tboa {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    .tboa:hover{
-        background-color: #415a82;
-    }
-    .tboc {
-        padding-top: 6px;
-        padding-right: 5px;
-        float: right;
-        vertical-align: center;
-    }
-    .inst {
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-    }
-    .titulo {
-        font-family: 'Roboto', sans-serif;
-        font-size: 22px;
-        text-align: center;
-        padding: 20px;
-    }
-    .texto {
-        font-family: 'Roboto', sans-serif;
-        font-size: 18px;
-        padding: 20px;
-    }
-    .mensa {
-        background-color: white;
-        border: 2px solid;
-        border-radius: 2px;
-        transition-duration: 0.4s;
-        font-size: 14px;
-        cursor: pointer;
-        font-family: 'Roboto', sans-serif;
-    }
-    .mensa:hover {
-        background-color: #ffa91e;
-        border: 2px solid;
-        border-radius: 2px;
-        font-size: 14px;
-        font-family: 'Roboto', sans-serif;
-    }
-</style>
-<body>
-    <ul class="topbar">
-      <li class="tbo"><a href="" class="tboa">Notícias</a></li>
-      <li class="tbo"><a href="gremio.html" class="tboa" class="tboa">Grêmio</a></li>
-      <li class="tbo"><a href="" class="tboa" class="tboa">Informações</a></li>
-      <li class="tbo"><a href="#inst" class="tboa" class="tboa">Institucional</a></li>
-      <li class="tboc"><img src="cti.png" height="35px"></li>
-    </ul>
-    <br><br>
-    <div class="titulo">O Grêmio Estudantil</div>
-    <div class="texto">
-        O Grêmio Estudantil é bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla ... <br><br>
-        <center><a href="sugest.html"><input class="mensa" type="button" value="Envie uma mensagem!"></a></center>
-    </div>
-    <br><br>
-    <a name="inst">
-        <div class="inst">
-        Telefone: 345787593475 Endereço: IOioasdbhgiahgi</div>
-    </a>
-</body>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro" rel="stylesheet">
+      <meta charset="UTF-8">
+      <title>Portal Estudantil - Grêmio</title>
+   </head>
+   
+   <body>
+      <div class="head">
+         <label style="font-weight: bold; font-size: 250%; padding-right: 10px;">Portal</label><a href="http://www.cti.feb.unesp.br" target="_blank"><img src="cti.png" width="15%"></a>
+      </div>
+      <div class="menu">
+         <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="">Notícias</a></li>
+            <li><a href="gremio.html" id="active">Grêmio</a></li>
+            <li><a href="info.html">Informações</a></li>
+            <li><a href="http://www.cti.feb.unesp.br" target="_blank">CTI</a></li>
+         </ul>
+      </div>
+      
+      <br><br><br>
+      <div align="center">
+		<h1>Grêmio Estudantil</h1>
+		<p>A representação discente, por discentes.</p>
+      </div>
+      <br>
+      
+	  <center>
+	  <div id="frmMsg">
+	  	<h2 align="center">Deixe sua mensagem!</h2>
+		<form action="insere.php" method="post">
+			<table class="frm">
+				<tr>
+					<td>
+						<label for="nome">Nome: </label>
+					</td>
+					<td class="inp">
+						<input type="text" name="nome" maxlength="50">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label for="curso">*Curso: </label>
+					</td>
+					<td>
+						<select name="curso" id="curso" required>
+						<option value="Informática">
+							Informática
+						</option>
+						<option value="Mecânica">
+							Mecânica
+						</option>
+						<option value="Eletrônica">
+							Eletrônica
+						</option>
+					</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label for="msg">*Mensagem: </label>
+					</td>
+					<td>
+						<textarea name="msg" id="msg" cols="10" rows="10" placeholder="Insira sua mensagem aqui..." required></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" id="obs">
+						<div>*Campos obrigatórios</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" name="envia" value="Enviar" class="btn">
+					</td>
+					<td style="text-align: left;">
+						<input type="reset" name="limpa" value="Limpar" class="btn">
+					</td>
+				</tr>
+			</table>
+		</form>
+	  </div>
+	  </center>
+     
+      <div style="padding-top: 20px;">
+		  <div class="rodape">
+			@ 2018,<br>por Estevão Rolim e Marco Antônio de Toledo.
+		  </div>
+      </div>
+   </body>
 </html>

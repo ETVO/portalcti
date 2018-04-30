@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+   	<link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Login</title>
 </head>
-<style>
-    body {
-        text-align: center;
-    }
-    .caixa {
-        width: 50%;
-    }
-    .bot {
-        width: 20%;
-    }
-</style>
 <body>
-    <form action="acesso.php" method="post">
-        <input type="password" class="caixa" name="cod">
-        <input type="submit" class="bot" value="Entrar">
-    </form>
+    <center>
+    	<div id="frmAcesso">
+    	<form action="acesso.php" method="post">
+			<table class="frm">
+				<tr>
+					<td>
+						<label for="cod">Código de Acesso:</label>
+					</td>
+
+					<td>
+						<input type="password" id="cod" name="cod" required>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<input type="submit" class="btn" value="Entrar">
+					</td>
+					
+					<td style="text-align: left;">
+						<input type="reset" class="btn" value="Limpar">
+					</td>
+				</tr>
+			</table>
+		</form>
+    </div>
+    </center>
 </body>
 </html>

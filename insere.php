@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Inserção SQL</title>
+    <title>Enviando sua mensagem...</title>
 </head>
 <script type="text/javascript">
     window.onload = function espera()
@@ -20,10 +20,10 @@
         include "connect.php";
         $nome = $_POST['nome'];
         $curso = $_POST['curso'];
-        $mensagem = $_POST['mens'];
+        $mensagem = $_POST['msg'];
         $data = date('Y/m/d H:i:s');
 
-        $sql = "INSERT INTO testegremio (code, nome, curso, mensagem, data) VALUES (nextval('teste_gremio_code'::regclass), '$nome', '$curso', '$mensagem', '$data')";
+        $sql = "INSERT INTO portal.mensagens (nome, curso, mensagem) VALUES ('$nome', '$curso', '$mensagem')";
         $resultado = pg_query($conecta, $sql);
         $linhas = pg_affected_rows($resultado);
         if ($linhas > 0)
