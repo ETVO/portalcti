@@ -10,149 +10,230 @@
 */
 
 /* Configurações gerais de cor, tamanho da página e fonte */
-form, button, html, body, select, textarea {
-  font-family: 'Raleway', sans-serif;
+
+form,
+button,
+html,
+body,
+input,
+select,
+textarea {
+	font-family: 'Raleway', sans-serif;
 }
 
 
-html, body{
-  background-color: white;
-  height: 101%
-}
-*,:before,:after{
-  transition-property: color;
-  transition-duration: 0;
-  
-  transition-property: background-color;
-  transition-duration: 0.3s;
+html,
+body {
+	background-color: white;
+	height: 101%
 }
 
+*,
+:before,
+:after {
+	transition-property: color;
+	transition-duration: 0;
+
+	transition-property: background-color;
+	transition-duration: 0.3s;
+}
+
+/* fim das configurações gerais */
 
 /* Classe "head" para configurar logo do Portal Estudantil - CTI */
+
 .head {
-   margin: auto;
-   width: 50%;
-   text-align: center;
-   padding: 10px;
+	margin: auto;
+	width: 50%;
+	text-align: center;
+	padding: 10px;
 }
+
 /* fim da classe "head" */
 
 /* Classe "menu" para barra superior de menu */
+
 .menu {
-   float:left;
-   display: block;
-   width: 100%;
-   width:100%;
-   border-bottom: 4px solid #00adef;
-   overflow:hidden;
-   position:relative;
+	float: left;
+	display: block;
+	width: 100%;
+	width: 100%;
+	border-bottom: 4px solid #00adef;
+	overflow: hidden;
+	position: relative;
+	margin: 0 0 1em 0;
 }
 
 .menu ul {
-   clear:left;
-   float:left;
-   list-style:none;
-   margin:0;
-   padding:0;
-   position:relative;
-   left:50%;
-   text-align:center;
+	clear: left;
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	left: 50%;
+	text-align: center;
 }
 
 .menu ul li {
-   display:block;
-   float:left;
-   list-style:none;
-   margin:0;
-   padding: 1px;
-   padding-bottom:0px;
-   position:relative;
-   right:50%;
+	display: block;
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 1px;
+	padding-bottom: 0px;
+	position: relative;
+	right: 50%;
 }
 
 .menu ul li a {
-   display:block;
-   margin:0 0 0 1px;
-   padding:8px 14px;
-   background-color:#f1f3f5;
-   color: black;
-   text-decoration:none;
-   line-height:1.3em;
+	display: block;
+	margin: 0 0 0 1px;
+	padding: 8px 14px;
+	background-color: #f1f3f5;
+	color: black;
+	text-decoration: none;
+	line-height: 1.3em;
 }
 
 .menu ul li a:hover {
-   background: #00adef;
-   color: white;
+	background: #00adef;
+	color: white;
 }
 
 .menu ul li a#active {
-   color: white;
-   background-color: #00adef;
-   font-weight: bold;
+	color: white;
+	background-color: #00adef;
+	font-weight: bold;
 }
 
 .menu ul li a#active:hover {
-   color: white;
-   background: #34bff2;
-   font-weight: bold;
+	color: white;
+	background: #34bff2;
+	font-weight: bold;
 }
+
 /* fim da classe "menu" */
 
+/* classe "body" */
+
+.body {
+	padding: 0 20px 25px 30px;
+}
+
+/* fim da classe "body" */
+
+/* classe "integrantes-gremio" */
+
+.integrantes-gremio {
+	padding: 5px 1em 2em 1em;
+}
+
+.integrantes-gremio ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.integrantes-gremio ul li ul {
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	padding: 10px;
+}
+
+.integrantes-gremio ul li ul:hover {
+	background-color: #fafafa;
+}
+
+.integrantes-gremio ul li ul li {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.integrantes-gremio ul li ul img {
+	width: 150px;
+}
+
+/* fim da classe "integrantes-gremio" */
+
 /* classe "frm" para Forms */
+
 .frm {
-    align-self: center;
-    border-spacing: 10px;
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
-    outline: none;
+	align-self: center;
+	border-spacing: 10px;
+	width: 100%;
+	padding-left: 30px;
+	padding-right: 30px;
+	outline: none;
 }
 
 .frm td {
 	text-align: right;
-    vertical-align: top;
-    width: 50%;
+	vertical-align: top;
+	width: 50%;
 }
 
 .frm #obs {
 	text-align: center;
 	font-weight: bold;
-    font-size: 14px;
+	font-size: 14px;
 }
 
-.frm td input[type="text"], input[type="password"], select, textarea{
-  	border: 1px solid;
-    width: 100%;
-    display: inline-block;
-    border-radius: 2px;
-    outline: none;
-  	resize: none;
+.frm td input[type="text"],
+input[type="password"],
+select,
+textarea {
+	border: 1px solid;
+	width: 100%;
+	display: inline-block;
+	border-radius: 2px;
+	outline: none;
+	resize: none;
+	padding: 2px;
+	padding-left: 5px;
 }
+
+.frm td select {
+	padding-left: 1px;
+}
+
+.frm td textarea {
+	padding-left: 5px;
+}
+
 /* fim da classe "frm" */
 
-
 /* id "frmMsg", atua em div que contém form e table (com class="frm") vide formulário de sugestões na página Grêmio */
+
 #frmMsg {
-    text-align: center;
-    font-size: 16px;
+	text-align: center;
+	font-size: 16px;
 	font-weight: bold;
-    background-color: rgba(0, 173, 239, 0.07);
-    max-width: 700px;
+	background-color: rgba(0, 173, 239, 0.07);
+	max-width: 700px;
 	padding-top: 1px;
+	padding-bottom: 5px;
+	margin: 1em;
+	border-radius: 20px;
 }
+
 /* fim id "frmMsg" */
 
 /* id "frmAcesso", atua em div que contém form e table (com class="frm") vide formulário de acesso na página logacesso.html */
+
 #frmAcesso {
-    text-align: center;
-    font-size: 16px;
+	text-align: center;
+	font-size: 16px;
 	font-weight: bold;
-    max-width: 700px;
+	max-width: 700px;
 	padding-top: 1px;
 }
-/* fim id "frmMsg" */
+
+/* fim id "frmAcesso" */
 
 /* Classe "btn" para definir aparência de botões */
+
 .btn {
 	text-align: center;
 	font-family: "Raleway", sans-serif;
@@ -168,13 +249,17 @@ html, body{
 .btn:hover {
 	background-color: #ffffff;
 }
+
 /* fim da classe "btn" */
 
-/* Configuração de nota de rodapé (class "rodape") */
-.rodape{
+/* Configuração de nota de rodapé (class "foot") */
+
+.rodape {
 	text-align: center;
 	font-size: 15px;
 	border-top: 1px solid #cbcbcb;
 	padding: 15px;
+	margin: 5px 0 0 0;
 }
-/* fim da classe "rodape" */
+
+/* fim da classe "foot" */

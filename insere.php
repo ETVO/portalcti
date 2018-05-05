@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Enviando sua mensagem...</title>
+	<meta charset="UTF-8">
+	<title>Enviando sua mensagem...</title>
 </head>
 <script type="text/javascript">
-    window.onload = function espera()
-    {
-        setTimeout(volta, 3000);
-    }
-    
-    function volta()
-    {
-        window.history.go(-1);
-    }
+	window.onload = function espera() {
+		setTimeout(volta, 3000);
+	}
+
+	function volta() {
+		window.history.go(-1);
+	}
+
 </script>
+
 <body>
-    <?php
+	<?php
         include "connect.php";
         $nome = $_POST['nome'];
         $curso = $_POST['curso'];
@@ -34,4 +35,5 @@
         pg_close($conecta); 
     ?>
 </body>
+
 </html>
