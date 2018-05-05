@@ -7,7 +7,7 @@
 <script type="text/javascript">
     window.onload = function espera()
     {
-        setTimeout(volta, 3000);
+        setTimeout(volta, 1);
     }
     
     function volta()

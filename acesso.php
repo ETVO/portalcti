@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Acesso grêmio</title>
 </head>
 <body>
     <p>
     <?php
-    $cod = $_POST['cod'];
-    if ($cod != 42)
+    include "connect.php";
+    $ra = $_POST['ra'];
+    $senha = $_POST['senha'];
+        
+    $sql = "SELECT * FROM portal.users WHERE ra = $ra";
+    $res = pg_query($conecta, $sql);
+    if ($res == NULL)
     {
-        ECHO "Código inválido!";
+        ECHO "RA inexistente!";
         exit;
     }
-    else
+    $vals = pg_fetch_object($res);
+        //ECHO $vals->senha."/fdp/".$senha;
+    if ($vals->senha != $senha)
     {
-        include "connect.php";
+        ECHO "Senha incorreta!";
+        exit;
+    }
+    if ($vals->adm != 's' || $vals->excluido != 'n' || $vals->ban != 'n')
+    {
+        ECHO "Você não possui permissão para acessar esse site!";
+        exit;
+    }
+    /*else
+    {*/
         $sql = "SELECT * FROM portal.mensagens";
         $res = pg_query($conecta, $sql);
         $cont = pg_num_rows($res);
         while($cont >= 1)
         {
-            $asql = "SELECT nome FROM portal.mensagens WHERE code = $cont";
-            $ares = pg_query($conecta, $asql);
-            $a = pg_fetch_object($ares);
-            $bsql = "SELECT curso FROM portal.mensagens WHERE code = $cont";
-            $bres = pg_query($conecta, $bsql);
-            $b = pg_fetch_object($bres);
-            $csql = "SELECT mensagem FROM portal.mensagens WHERE code = $cont";
-            $cres = pg_query($conecta, $csql);
-            $c = pg_fetch_object($cres);
-            $dsql = "SELECT data FROM portal.mensagens WHERE code = $cont";
-            $dres = pg_query($conecta, $dsql);
-            $d = pg_fetch_object($dres);
-            ECHO "Nome: ".$a->nome."<br>Curso: ".$b->curso."<br>Mensagem: ".$c->mensagem."<br>Data: ".$d->data."<br><hr>";
+            $rsql = "SELECT * FROM portal.mensagens WHERE id = $cont";
+            $valores = pg_query($conecta, $rsql);
+            $r = pg_fetch_object($valores);
+            ECHO "Nome: ".$r->nome."<br>Curso: ".$r->curso."<br>Mensagem: ".$r->mensagem."<br>Data: ".$r->data."<br><hr>";
             $cont--;
         }
-    }
+    //}
     pg_close($conecta);
     ?>
     </p>

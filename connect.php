@@ -2,7 +2,6 @@
 <html lang="pt-br">
      <head>
          <meta charset="utf-8" />
-         <title>Conexão com BD PostgreSQL</title>
      </head>
      <body>
      <?php

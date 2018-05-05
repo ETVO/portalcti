@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    	<link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro" rel="stylesheet">
     <meta charset="UTF-8">
@@ -12,17 +13,23 @@
     	<form action="acesso.php" method="post">
 			<table class="frm">
 				<tr>
-					<td>
-						<label for="cod">Código de Acesso:</label>
+					<td style="text-align: center;"  colspan="2">
+						<label for="cod">Login de Administração:</label>
 					</td>
-
-					<td>
-						<input type="password" id="cod" name="cod" required>
+                </tr>
+                <tr>
+					<td colspan="2">
+					    <input type="text" id="user" name="ra" placeholder="RA..." required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+						<input type="password" id="cod" name="senha" placeholder="Senha..." required>
 					</td>
 				</tr>
 				
 				<tr>
-					<td>
+					<td style="text-align: right;">
 						<input type="submit" class="btn" value="Entrar">
 					</td>
 					
