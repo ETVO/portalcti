@@ -1,0 +1,13 @@
+ErrorDocument 401 /erro/naoautorizado.html
+ErrorDocument 404 /erro/naoencontrado.html
+ErrorDocument 403 /erro/acessonegado.html
+ErrorDocument 500 /erro/errointerno.html
+
+<Files "scripts/insere.php">
+        Order Deny,Allow
+        Deny from all
+</Files>
+
+<IfModule mod_dir.c>
+      DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+</IfModule>

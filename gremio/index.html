@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>Portal Estudantil - Grêmio</title>
+</head>
+
+<body>
+	<div class="head">
+		<label style="font-weight: bold; font-size: 250%; padding-right: 10px;">Portal</label><a href="http://www.cti.feb.unesp.br" target="_blank"><img src="../imgs/cti.png" width="100px"></a>
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a href="../">Início</a></li>
+			<li><a href="">Notícias</a></li>
+			<li><a href="../gremio/" id="active">Grêmio</a></li>
+			<li><a href="../info/">Informações</a></li>
+			<li><a href="http://www.cti.feb.unesp.br" target="_blank">CTI</a></li>
+			<li><a href="../login/">Minha Conta</a></li>
+		</ul>
+	</div>
+
+	<div align="center">
+		<h1>Grêmio Estudantil</h1>
+		<p>A representação discente, por discentes.</p>
+	</div>
+
+	<center>
+		<h2>Quem são?</h2>
+		<div class="integrantes-gremio">
+			<ul>
+				<li>
+					<ul>
+						<li>
+							<img src="" alt="Presidente - Estevão Rolim">
+						</li>
+						<li>
+							<p><b>Presidente</b></p>
+						</li>
+						<li>
+							<p>Estevão P. Rolim</p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<img src="" alt="Vice-Presidente - Marco Toledo">
+						</li>
+						<li>
+							<p><b>Vice-Presidente</b></p>
+						</li>
+						<li>
+							<p>Marco Antônio R. de Toledo</p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<img src="" alt="Tesoureiro - Victor Martins">
+						</li>
+						<li>
+							<p><b>Tesoureiro</b></p>
+						</li>
+						<li>
+							<p>Victor Manoel J. P. Martins</p>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<img src="" alt="Secretária - Alesxya Soares">
+						</li>
+						<li>
+							<p><b>Secretária</b></p>
+						</li>
+						<li>
+							<p>Alesxya Soares da Silva</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</center>
+
+	<center>
+		<div id="frmMsg">
+			<h2>Deixe sua mensagem!</h2>
+			<form action="../scripts/insere.php" method="post">
+				<table class="frm">
+					<tr>
+						<td>
+							<label for="nome">Nome: </label>
+						</td>
+						<td class="inp">
+							<input type="text" name="nome" maxlength="50">
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="curso">*Curso: </label>
+						</td>
+						<td>
+							<select name="curso" id="curso" required>
+							<option value="Informática">
+								Informática
+							</option>
+							<option value="Mecânica">
+								Mecânica
+							</option>
+							<option value="Eletrônica">
+								Eletrônica
+							</option>
+						</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="msg">*Mensagem: </label>
+						</td>
+						<td>
+							<textarea name="msg" id="msg" cols="10" rows="10" placeholder="Insira sua mensagem aqui..." required></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" id="obs">
+							<div>*Campos obrigatórios</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="submit" name="envia" value="Enviar" class="btn">
+						</td>
+						<td style="text-align: left;">
+							<input type="reset" name="limpa" value="Limpar" class="btn">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</center>
+
+	<div class="rodape">
+		@ 2018,<br>por Estevão Rolim e Marco Antônio de Toledo.
+	</div>
+</body>
