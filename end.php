@@ -7,17 +7,24 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro" rel="stylesheet">
 	<meta charset="utf-8" />
 </head>
+<script type="text/javascript">
+	window.onload = function espera() {
+		setTimeout(volta, 1);
+	}
+
+	function volta() {
+		window.history.go(-1);
+	}
+
+</script>
 
 <body>
 	<?php
-         //Conecta com o PostgreSQL
-         $conecta = pg_connect("host=127.0.0.1 port=5432 dbname=meteoro
-         user=meteoro password=CTImeteorologia2018");
-        if (!$conecta)
-        {
-            echo "Não foi possível estabelecer conexão com o banco de dados!<br><br>";
-            exit;
-        }
+         include "connect.php";
+         session_start();
+         $_SESSION = array();
+         session_destroy();
+         pg_close($conecta);
      ?>
 </body>
 

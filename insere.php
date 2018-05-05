@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro" rel="stylesheet">
 	<meta charset="UTF-8">
 	<title>Enviando sua mensagem...</title>
 </head>
 <script type="text/javascript">
 	window.onload = function espera() {
-		setTimeout(volta, 3000);
+		setTimeout(volta, 1);
 	}
 
 	function volta() {
