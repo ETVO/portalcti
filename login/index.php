@@ -77,7 +77,7 @@
 				$rsql = "SELECT * FROM portal.users WHERE ra = $ra";
 				$valores = pg_query($conecta, $rsql);
 				$r = pg_fetch_object($valores);
-				ECHO "<h3 style='text-align: center;'>.$r->nome.\"<br>.$r->curso.\"<br>.$r->email.\"</h3>";
+				ECHO "<h3 style='text-align: center;'>$r->nome\"<br>$r->curso\"<br>$r->email\"</h3>";
 		?>
 
 				<center>
