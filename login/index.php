@@ -57,12 +57,8 @@
 							</tr>
 
 							<tr>
-								<td style="text-align: right;">
-									<input type="submit" class="btn" value="Entrar">
-								</td>
-
-								<td style="text-align: left;">
-									<input type="reset" class="btn" value="Limpar">
+								<td id="obs" colspan="2">
+									<input type="submit" class="btn" value="Entrar"> &nbsp; &nbsp; <input type="reset" class="btn" value="Limpar">
 								</td>
 							</tr>
 						</table>
@@ -77,11 +73,11 @@
 				$rsql = "SELECT * FROM portal.users WHERE ra = $ra";
 				$valores = pg_query($conecta, $rsql);
 				$r = pg_fetch_object($valores);
-				ECHO "<h3 style='text-align: center;'>.$r->nome.\"<br>.$r->curso.\"<br>.$r->email.\"</h3>";
+				ECHO "<h3 style='text-align: center;'>".$r->nome."<br>".$r->curso."<br>".$r->email."</h3>";
 		?>
 
 				<center>
-					<input type="button" class="btn" value="Encerrar sessão" onclick="window.open('http://200.145.153.175/marcotoledo/gremio/end.php','_self')">
+					<input type="button" class="btn" value="Encerrar sessão" onclick="window.open('http://200.145.153.175/marcotoledo/gremio/scripts/end.php','_self')">
 				</center>
 				<?php
 			}

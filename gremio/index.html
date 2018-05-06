@@ -89,16 +89,16 @@
 			<form action="../scripts/insere.php" method="post">
 				<table class="frm">
 					<tr>
-						<td>
+						<td id="frmTxt">
 							<label for="nome">Nome: </label>
 						</td>
-						<td class="inp">
-							<input type="text" name="nome" maxlength="50">
+						<td>
+							<input type="text" name="nome" maxlength="50" placeholder="Insira seu nome (não obrigatório)...">
 						</td>
 					</tr>
 
 					<tr>
-						<td>
+						<td id="frmTxt">
 							<label for="curso">*Curso: </label>
 						</td>
 						<td>
@@ -117,7 +117,7 @@
 					</tr>
 
 					<tr>
-						<td>
+						<td id="frmTxt">
 							<label for="msg">*Mensagem: </label>
 						</td>
 						<td>
@@ -130,11 +130,8 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
-							<input type="submit" name="envia" value="Enviar" class="btn">
-						</td>
-						<td style="text-align: left;">
-							<input type="reset" name="limpa" value="Limpar" class="btn">
+						<td id="obs" colspan="2">
+							<input type="submit" name="envia" value="Enviar" class="btn"> &nbsp; &nbsp; <input type="reset" name="limpa" value="Limpar" class="btn">
 						</td>
 					</tr>
 				</table>
