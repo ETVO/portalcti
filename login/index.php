@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<head>
+	    <script type="text/javascript" src="../js/auto.js"></script>
 		<link rel="stylesheet" type="text/css" href="../style.css">
 		<link href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro" rel="stylesheet">
 		<meta charset="UTF-8">
@@ -28,7 +29,7 @@
 			</ul>
 		</div>
 
-		<br><br><br>
+		<br>
 		<h1 align="center">Minha Conta</h1>
 		<?php
 			if (empty($_SESSION['ra'])) 
@@ -82,9 +83,7 @@
 				<?php
 			}
 		?>
-				<div class="rodape">
-					@ 2018,<br>por Estevão Rolim e Marco Antônio de Toledo.
-				</div>
+				<div class="rodape" id="foot"></div>
 	</body>
 
 	</html>

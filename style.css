@@ -59,6 +59,7 @@ body {
 	width: 100%;
 	width: 100%;
 	border-bottom: 4px solid #00adef;
+	overflow: hidden;
 	position: relative;
 	margin: 0 0 1em 0;
 }
