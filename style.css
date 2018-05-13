@@ -2,7 +2,8 @@
 	StyleSheet - Portal Online Estudantil: CTI
 
 	Cores principais:
-		- #00adef (azul-claro);
+		- #00adef (azul-claro primário);
+		- #34bff2 (azul-claro secundário)
 		- white;
 		- black;
 		- #f1f3f5 (cinza-claro);
@@ -11,16 +12,30 @@
 
 /* Configurações gerais de cor, tamanho da página e fonte */
 
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Arimo|Dosis|Lato|Nunito+Sans|Open+Sans|Quattrocento+Sans|Quicksand|Raleway|Work+Sans');
+
 form,
 button,
 html,
 body,
 input,
 select,
-textarea {
+textarea,
+p {
 	font-family: 'Raleway', sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.head,
+.menu,
+.rodape {
+	font-family: 'Raleway', sans-serif;
+}
 
 html,
 body {
@@ -33,9 +48,6 @@ body {
 :after {
 	transition-property: color;
 	transition-duration: 0;
-    
-    transition-property: border-bottom-color;
-	transition-duration: 0.3s;
 
 	transition-property: background-color;
 	transition-duration: 0.3s;
@@ -115,6 +127,7 @@ body {
 	background: #34bff2;
 	font-weight: bold;
 }
+
 /* fim da classe "menu" */
 
 /* classe "body" */
@@ -142,6 +155,7 @@ body {
 	display: inline-block;
 	margin: 0;
 	padding: 10px;
+	border-radius: 3px;
 }
 
 .integrantesgremio ul li ul:hover {
@@ -172,7 +186,7 @@ body {
 
 .frm td {
 	vertical-align: top;
-    text-align: right;
+	text-align: right;
 }
 
 .frm #obs {
@@ -198,6 +212,7 @@ textarea {
 .frm td select {
 	padding-left: 1px;
 }
+
 .frm td textarea {
 	padding-left: 5px;
 }
@@ -221,9 +236,11 @@ textarea {
 /* fim id "frmMsg" */
 
 /* id "frmTxt", atua na td do frmMsg a fim de declarar uma menor largura para o texto */
+
 #frmTxt {
-    width: 20%;
+	width: 20%;
 }
+
 /* fim if "frmTxt" */
 
 /* id "frmAcesso", atua em div que contém form e table (com class="frm") vide formulário de acesso na página logacesso.html */
@@ -260,7 +277,7 @@ textarea {
 /* Configuração de nota de rodapé (class "foot") */
 
 .rodape {
-    padding-top: 15px;
+	padding-top: 15px;
 	text-align: center;
 	font-size: 15px;
 	border-top: 1px solid #cbcbcb;
@@ -273,20 +290,35 @@ textarea {
 /* classe de mensagem da página de acesso */
 
 .acessoMsg {
-    border-color: #00adef;
-    border-radius: 20px;
-    padding: 1em;
-    background-color: rgba(0, 173, 239, 0.07);
-    margin-bottom: 20px;
+	border-color: #00adef;
+	border-radius: 20px;
+	padding: 1em;
+	background-color: rgba(0, 173, 239, 0.07);
+	margin-bottom: 20px;
 }
 
 /* fim da classe de mensagem da página de acesso */
 
 /* classe de links de redirecionamento comum da página */
 
-.link, .link: visited, .link:active, .link:hover {
-    text-decoration: none;
-    color: #00adef;
+.link:link {
+	text-decoration: none;
+	color: #00adef;
+}
+
+.link:visited {
+	text-decoration: none;
+	color: #00adef;
+}
+
+.link:hover {
+	text-decoration: underline;
+	color: #34bff2;
+}
+
+.link:active {
+	text-decoration: none;
+	color: #00adef;
 }
 
 /* fim da classe de links */

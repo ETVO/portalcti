@@ -4,9 +4,8 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="../style.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro" rel="stylesheet">
 	<meta charset="UTF-8">
-	<title>Acesso grêmio</title>
+	<title>Administração - Acesso Mensagens</title>
 </head>
 
 <body>
