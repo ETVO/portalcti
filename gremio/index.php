@@ -127,7 +127,7 @@
     ?>
 					<center>
 						<div id="frmMsg">
-							<h3>Você precisa entrar em sua conta para enviar mensagens ao Grêmio!</h3>
+							<h3>Deseja enviar mensagens ao Grêmio?</h3>
 							<h4><a href="../login/" class="link">Clique aqui para fazer login!</a></h4>
 						</div>
 					</center>
@@ -139,14 +139,14 @@
 						<center>
 							<div id="frmMsg">
 								<h2>Deixe sua proposta ao grêmio!</h2>
-								<form action="" method="post" id="msgFrm">
+								<form action="" method="post">
 									<table class="frm">
 										<tr>
 											<td id="frmTxt">
 												<label for="msg">Mensagem: </label>
 											</td>
 											<td>
-												<textarea name="msg" id="msg" cols="10" rows="10" placeholder="Insira sua proposta aqui..." required></textarea>
+												<textarea name="msg" id="msg" cols="10" rows="10" placeholder="Insira sua mensagem..." required></textarea>
 											</td>
 										</tr>
 										<tr>
