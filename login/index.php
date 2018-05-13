@@ -132,19 +132,26 @@
 				$valores = pg_query($conecta, $rsql);
 				$r = pg_fetch_object($valores);
 				ECHO "<h3 style='text-align: center;'>".$r->nome."<br>".$r->curso."<br>".$r->email."</h3>";
-		?>
-
-							<div style="margin-bottom: 1em;">
-								<center>
-									<form action="" method="post">
-										<input type="submit" class="btn" value="Encerrar sessão" name="encerraB">
-									</form>
-								</center>
-							</div>
+		        if($r->adm == 's' || $r->editor == 's' || $r->moderador == 's')
+                {?>
+							<center>
+								<div style="margin-bottom: 6px;">
+									<a href="../menuadm/"><input type="button" class="btn" name="adm" value="Aceder à página administrativa"></a>
+								</div>
+								<?php
+				}
+                    ?>
+									<div style="margin-bottom: 1em;">
+										<form action="" method="post">
+											<input type="submit" class="btn" value="Encerrar sessão" name="encerraB">
+										</form>
+									</div>
+							</center>
 							<?php
+                }
 			}
 		?>
-							<div class="rodape" id="foot"></div>
+								<div class="rodape" id="foot"></div>
 				</body>
 
 				</html>
