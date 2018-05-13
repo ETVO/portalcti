@@ -195,8 +195,23 @@ body {
 	font-size: 14px;
 }
 
+.frm #frmRadio {
+	text-align: left;
+	font-size: 14px;
+}
+
+.frm #frmRadio input {
+	cursor: pointer;
+}
+
+.frm #frmTxt {
+	width: 20%;
+}
+
 .frm td input[type="text"],
 input[type="password"],
+input[type="number"],
+input[type="email"],
 select,
 textarea {
 	border: 1px solid;
@@ -207,6 +222,9 @@ textarea {
 	resize: none;
 	padding: 2px;
 	padding-left: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .frm td select {
@@ -235,13 +253,22 @@ textarea {
 
 /* fim id "frmMsg" */
 
-/* id "frmTxt", atua na td do frmMsg a fim de declarar uma menor largura para o texto */
+/* início da classe do form para cadastro (administrativo) */
 
-#frmTxt {
-	width: 20%;
+#frmCadastro {
+	margin-top: 50px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: rgba(0, 173, 239, 0.07);
+	max-width: 400px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 1em;
+	border-radius: 20px;
 }
 
-/* fim if "frmTxt" */
+/* fim da classe do form para cadastro (administrativo) */
 
 /* id "frmAcesso", atua em div que contém form e table (com class="frm") vide formulário de acesso na página logacesso.html */
 
@@ -290,6 +317,8 @@ textarea {
 /* classe de mensagem da página de acesso */
 
 .acessoMsg {
+	position: relative;
+	display: block;
 	border-color: #00adef;
 	border-radius: 20px;
 	padding: 1em;
@@ -322,20 +351,3 @@ textarea {
 }
 
 /* fim da classe de links */
-
-/* início da classe do form para cadastro (administrativo) */
-
-#frmCadastro {
-    margin-top: 50px;
-    text-align: center;
-	font-size: 16px;
-	font-weight: bold;
-	background-color: rgba(0, 173, 239, 0.07);
-	max-width: 700px;
-	padding-top: 1px;
-	padding-bottom: 5px;
-	margin: 1em;
-	border-radius: 20px;
-}
-
-/* fim da classe do form para cadastro (administrativo) */

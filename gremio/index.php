@@ -139,7 +139,7 @@
 						<center>
 							<div id="frmMsg">
 								<h2>Deixe sua proposta ao grêmio!</h2>
-								<form action="" method="post" id="frmMsg">
+								<form action="" method="post">
 									<table class="frm">
 										<tr>
 											<td id="frmTxt">
