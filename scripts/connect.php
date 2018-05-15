@@ -11,7 +11,7 @@
 	<?php
          //Conecta com o PostgreSQL
          $conecta = pg_connect("host=127.0.0.1 port=5432 dbname=meteoro
-         user=meteoro password=CTImeteoro18");
+         user=meteoro password=");
         if (!$conecta)
         {
             echo "Não foi possível estabelecer conexão com o banco de dados!<br><br>";
